@@ -1,0 +1,14 @@
+{
+  "name": "frontendfinland",
+  "version": "1.0.0",
+  "description": "Front End course repository",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "Luis Ortiz Rivera",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^9.0.0"
+  }
+}
