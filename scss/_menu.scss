@@ -35,3 +35,25 @@
 		}
 	}
 }
+
+.menu-nav {
+	visibility: hidden;
+	list-style: none;
+	font-size: 1.5rem;
+	// Center list in the page
+	position: absolute;
+	// top: 50dpx;
+	// left: 80%;
+	transform: translate(400%, 80%);
+
+	li {
+		margin-bottom: 1rem;
+	}
+
+	&.show {
+		visibility: visible;
+		@include easeOut;
+	}
+}
+
+//Menu overlay

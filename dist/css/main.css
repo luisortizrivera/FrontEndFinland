@@ -22,6 +22,18 @@
       transform: rotate(-45deg) translate(7px, -6px);
       background: red; }
 
+.menu-nav {
+  visibility: hidden;
+  list-style: none;
+  font-size: 1.5rem;
+  position: absolute;
+  transform: translate(400%, 80%); }
+  .menu-nav li {
+    margin-bottom: 1rem; }
+  .menu-nav.show {
+    visibility: visible;
+    transition: all 0.5s ease-in-out; }
+
 * {
   box-sizing: border-box; }
 
