@@ -21,7 +21,6 @@
 		transform: rotate(180deg);
 
 		.btn-line {
-			// Rotate into X with menu lines
 			&:nth-child(1) {
 				transform: rotate(45deg) translate(5px, 5px);
 				background: red;
