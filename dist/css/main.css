@@ -22,17 +22,65 @@
       transform: rotate(-45deg) translate(7px, -6px);
       background: red; }
 
-.menu-nav {
-  visibility: hidden;
-  list-style: none;
-  font-size: 1.5rem;
-  position: absolute;
-  transform: translate(400%, 80%); }
-  .menu-nav li {
-    margin-bottom: 1rem; }
-  .menu-nav.show {
-    visibility: visible;
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.9;
+  visibility: hidden; }
+  .menu.show {
+    visibility: visible; }
+  .menu-branding, .menu-nav {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
     transition: all 0.5s ease-in-out; }
+    .menu-branding.show, .menu-nav.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-nav {
+    margin: 0;
+    padding: 0;
+    background: #373737;
+    font-size: larger;
+    list-style: none;
+    transform: translate3d(0, 100%, 0); }
+    .menu-nav .nav-item {
+      opacity: 0;
+      transition: opacity 0.2s ease-in; }
+      .menu-nav .nav-item.show {
+        opacity: 1; }
+        .menu-nav .nav-item.show:nth-child(1) {
+          transition-delay: 0.5s; }
+        .menu-nav .nav-item.show:nth-child(2) {
+          transition-delay: 1s; }
+        .menu-nav .nav-item.show:nth-child(3) {
+          transition-delay: 1.5s; }
+        .menu-nav .nav-item.show:nth-child(4) {
+          transition-delay: 2s; }
+        .menu-nav .nav-item.show:nth-child(5) {
+          transition-delay: 2.5s; }
+  .menu-branding {
+    background: #3f3f3f;
+    transform: translate3d(0, -100%, 0); }
+    .menu-branding .portrait {
+      width: 250px;
+      height: 250px;
+      background: url(../img/Branding.png);
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 50%;
+      border: solid 3px white;
+      opacity: 0;
+      transition: opacity 0.1s; }
+    .menu-branding.show .portrait {
+      transition: opacity 2s ease-in;
+      opacity: 1; }
 
 * {
   box-sizing: border-box; }
@@ -63,7 +111,8 @@ h3 {
   h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(69, 69, 69, 0.5); }
+    background: rgba(69, 69, 69, 0.5);
+    display: inline-block; }
 
 a {
   color: white;
