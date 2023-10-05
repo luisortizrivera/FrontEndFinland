@@ -9,18 +9,16 @@
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
-    background: white;
+    background: #fff;
     transition: all 0.5s ease-in-out; }
   .menu-btn.close {
     transform: rotate(180deg); }
     .menu-btn.close .btn-line:nth-child(1) {
-      transform: rotate(45deg) translate(5px, 5px);
-      background: red; }
+      transform: rotate(45deg) translate(5px, 5px); }
     .menu-btn.close .btn-line:nth-child(2) {
       opacity: 0; }
     .menu-btn.close .btn-line:nth-child(3) {
-      transform: rotate(-45deg) translate(7px, -6px);
-      background: red; }
+      transform: rotate(-45deg) translate(7px, -6px); }
 
 .menu {
   position: fixed;
@@ -68,7 +66,7 @@
       opacity: 0;
       padding: 1rem 0;
       font-weight: 300;
-      color: white;
+      color: #fff;
       text-decoration: none; }
       .menu-nav .nav-item .nav-link:hover {
         transition: font-size 0.5s linear;
@@ -85,48 +83,19 @@
       background-repeat: no-repeat;
       background-position: center;
       border-radius: 50%;
-      border: solid 3px white;
+      border: solid 3px #fff;
       opacity: 0;
       transition: opacity 0.1s; }
     .menu-branding.show .portrait {
       transition: opacity 2s ease-in;
       opacity: 1; }
 
-@media screen and (max-width: 768px) {
-  main {
-    align-items: center;
-    text-align: center; }
-    main .lg-heading {
-      line-height: 1;
-      margin-bottom: 1rem; }
-  .menu-nav, .menu-branding {
-    float: none;
-    width: 100%;
-    min-height: 0; }
-    .menu-nav.show, .menu-branding.show {
-      transform: translate3d(0, 0, 0); }
-  .menu-branding {
-    height: 25vh;
-    transform: translate3d(100%, 0, 0);
-    background: rgba(68, 68, 68, 0.9); }
-    .menu-branding .portrait {
-      width: 130px;
-      height: 130px; }
-  .menu-nav {
-    height: 75vh;
-    transform: translate3d(-100%, 0, 0);
-    font-size: medium; } }
-
-@media screen and (max-width: 500px) {
-  main#home h1 {
-    margin-top: 10vh; } }
-
 * {
   box-sizing: border-box; }
 
 body {
   background-color: #444;
-  color: white;
+  color: #fff;
   height: 100%;
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -167,7 +136,7 @@ header {
 
 main {
   padding: 4rem;
-  height: 100%; }
+  min-height: calc(100vh - 60px); }
   main .icons {
     margin-top: 1rem; }
     main .icons a {
@@ -179,3 +148,68 @@ main {
     overflow: hidden; }
     main#home h1 {
       margin-top: 20vh; }
+
+.about-info {
+  display: grid;
+  grid-template-areas: "bioimage bio bio" "job1 job2 job3";
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px; }
+  .about-info .bio-image {
+    grid-area: bioimage;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: auto;
+    border: 2px solid white; }
+  .about-info .bio {
+    grid-area: bio;
+    font-size: 1.5rem; }
+  .about-info .job {
+    padding: 1rem;
+    background: #515151;
+    border-bottom: #eece1a solid 5px; }
+    .about-info .job .job-1 {
+      grid-area: job1; }
+    .about-info .job .job-2 {
+      grid-area: job2; }
+    .about-info .job .job-3 {
+      grid-area: job3; }
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #2b2b2b;
+  color: #fff;
+  height: 60px; }
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  .menu-nav, .menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    .menu-nav.show, .menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-branding {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0);
+    background: rgba(68, 68, 68, 0.9); }
+    .menu-branding .portrait {
+      width: 130px;
+      height: 130px; }
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: medium; }
+  .about-info {
+    grid-template-areas: "bioimage" "bio" "bio" "job1" "job2" "job3";
+    grid-template-columns: 1fr; } }
+
+@media screen and (max-width: 500px) {
+  main#home h1 {
+    margin-top: 10vh; } }

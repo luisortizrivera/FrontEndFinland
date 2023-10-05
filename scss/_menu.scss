@@ -11,7 +11,7 @@
 		width: 28px;
 		height: 3px;
 		margin: 0 0 5px 0;
-		background: white;
+		background: set-text-color($primary-color);
 		@include easeOut;
 	}
 
@@ -22,14 +22,12 @@
 		.btn-line {
 			&:nth-child(1) {
 				transform: rotate(45deg) translate(5px, 5px);
-				background: red;
 			}
 			&:nth-child(2) {
 				opacity: 0;
 			}
 			&:nth-child(3) {
 				transform: rotate(-45deg) translate(7px, -6px);
-				background: red;
 			}
 		}
 	}
@@ -90,7 +88,7 @@
 				opacity: 0;
 				padding: 1rem 0;
 				font-weight: 300;
-				color: white;
+				color: set-text-color($primary-color);
 				text-decoration: none;
 				&:hover {
 					transition: font-size 0.5s linear;
@@ -112,7 +110,7 @@
 			background-repeat: no-repeat;
 			background-position: center;
 			border-radius: 50%;
-			border: solid 3px white;
+			border: solid 3px set-text-color($primary-color);
 			opacity: 0;
 			transition: opacity 0.1s;
 		}
