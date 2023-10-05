@@ -70,6 +70,10 @@
       font-weight: 300;
       color: white;
       text-decoration: none; }
+      .menu-nav .nav-item .nav-link:hover {
+        transition: font-size 0.5s linear;
+        color: #eece1a;
+        font-size: 2em; }
   .menu-branding {
     background: rgba(68, 68, 68, 0.9);
     transform: translate3d(0, -100%, 0); }

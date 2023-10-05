@@ -92,6 +92,11 @@
 				font-weight: 300;
 				color: white;
 				text-decoration: none;
+				&:hover {
+					transition: font-size 0.5s linear;
+					color: $secondary-color;
+					font-size: 2em;
+				}
 			}
 		}
 	}
