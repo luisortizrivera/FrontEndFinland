@@ -93,7 +93,6 @@ main {
 	}
 
 	.job {
-		// border: 2px solid white;
 		padding: 1rem;
 		background: lighten($primary-color, 5);
 		border-bottom: $secondary-color solid 5px;
@@ -115,7 +114,6 @@ main {
 	background-color: darken($primary-color, 10);
 	color: set-text-color($primary-color);
 	height: 60px;
-	// position: sticky;
 }
 
 @import "mobile";
