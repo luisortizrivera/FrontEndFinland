@@ -59,6 +59,10 @@
 	.projects {
 		grid-template-columns: repeat(2, 1fr);
 	}
+	.boxes div {
+		font-size: larger;
+		padding: 0.8rem;
+	}
 }
 
 //Small screens (smatrphones)
@@ -68,5 +72,9 @@
 	}
 	.projects {
 		grid-template-columns: 1fr;
+	}
+	.boxes div {
+		font-size: large;
+		padding: 0.5rem;
 	}
 }
