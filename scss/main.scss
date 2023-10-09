@@ -159,7 +159,7 @@ main {
 		@include easeOut;
 
 		&:hover {
-			padding: 2rem;
+			transform: scale(1.1);
 			background: $secondary-color;
 			color: set-text-color($secondary-color);
 			span {
