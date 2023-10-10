@@ -83,8 +83,13 @@
 	.projects {
 		grid-template-columns: 1fr;
 	}
-	.boxes div {
-		font-size: large;
-		padding: 0.5rem;
+	.boxes {
+		.Contact {
+			font-size: large;
+			padding: 0.5rem;
+		}
+		.Copy-text {
+			size: 0.5rem;
+		}
 	}
 }
