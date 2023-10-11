@@ -48,3 +48,33 @@ $background-opacity: 0.9;
 		@content;
 	}
 }
+
+@keyframes animateLeft {
+	0% {
+		height: 0;
+	}
+
+	100% {
+		height: 100%;
+	}
+}
+
+@keyframes animateTop {
+	0% {
+		width: 0%;
+	}
+
+	100% {
+		width: 100%;
+	}
+}
+
+@keyframes animateRight {
+	0% {
+		height: 0;
+	}
+
+	100% {
+		height: 100%;
+	}
+}

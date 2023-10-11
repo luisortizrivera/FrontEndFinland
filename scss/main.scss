@@ -95,15 +95,59 @@ main {
 	.job {
 		padding: 1rem;
 		background: lighten($primary-color, 5);
-		border-bottom: $secondary-color solid 5px;
-		.job-1 {
+		position: relative;
+		overflow: hidden;
+		border-bottom: 2px solid $secondary-color;
+
+		&.job-1 {
 			grid-area: job1;
 		}
-		.job-2 {
+		&.job-2 {
 			grid-area: job2;
 		}
-		.job-3 {
+		&.job-3 {
 			grid-area: job3;
+		}
+		span {
+			position: absolute;
+			background: $secondary-color;
+		}
+
+		//styling job borders animation
+		$line-width: 2px;
+		$line-height: 0;
+		.left,
+		.right {
+			width: $line-width;
+			height: $line-height;
+		}
+		.left {
+			left: 0;
+			bottom: 0;
+		}
+		.right {
+			top: 0;
+			right: 0;
+		}
+		.top {
+			top: 0;
+			left: 0;
+			width: $line-height;
+			height: $line-width;
+		}
+
+		&:hover {
+			scale: 1.1;
+			@include easeOut();
+			.left {
+				animation: animateLeft 1s forwards;
+			}
+			.top {
+				animation: animateTop 1s forwards 1s;
+			}
+			.right {
+				animation: animateRight 1s forwards 2s;
+			}
 		}
 	}
 }
