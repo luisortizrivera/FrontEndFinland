@@ -119,7 +119,7 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body#bd-img {
-    background: url(../img/imageComp.webp);
+    background: url(../img/imageImp.webp);
     background-attachment: fixed;
     background-size: cover; }
 
