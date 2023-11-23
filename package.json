@@ -1,17 +1,17 @@
 {
-  "name": "frontendfinland",
-  "version": "1.0.0",
-  "description": "Front End course repository",
-  "main": "index.js",
-  "homepage": "https://luisortizrivera.github.io/FrontEndFinland/",
-  "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
-    "deploy": "gh-pages -d dist"
-  },
-  "author": "Luis Ortiz Rivera",
-  "license": "ISC",
-  "dependencies": {
-    "gh-pages": "^6.0.0",
-    "node-sass": "^9.0.0"
-  }
+	"name": "frontendfinland",
+	"version": "1.0.0",
+	"description": "Front End course repository",
+	"main": "index.js",
+	"homepage": "https://luisortizrivera.github.io/FrontEndFinland/",
+	"scripts": {
+		"sass": "sass scss/:dist/css/ --watch",
+		"deploy": "gh-pages -d dist"
+	},
+	"author": "Luis Ortiz Rivera",
+	"license": "ISC",
+	"dependencies": {
+		"gh-pages": "^6.0.0",
+		"sass": "^1.69.5"
+	}
 }
