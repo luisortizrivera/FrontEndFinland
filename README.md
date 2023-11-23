@@ -2,6 +2,7 @@
 
 Welcome to the FrontEndFinland repository! This is my first front-end development focused project following the instructions of the LUT university Front-End course.
 It has been primarly created using node and sass to compile the css styles being the goal creating a basic portfolio.
+The project has been published and can be accessed on https://luisortizrivera.github.io/FrontEndFinland/index.html
 
 ## How to run the project
 
